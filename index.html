@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+
+   <link rel="stylesheet" type="text/css" href="css/technical.css">
+
+   <style>
+   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+   @media screen and (max-width: 800px) {
+     .leftcolumn, .rightcolumn {
+       width: 100%;
+       padding: 0;
+     }
+   }
+   </style>
+
+</head>
+<body>
+
+  <div class="header">
+    <h1>How to install Ubuntu</h1>
+    <p>Process of installing Ubuntu</p>
+  </div>
+
+
+
+   <div class="row">
+<div class="leftcolumn">
+
+  <div class="card">
+    <nav id="navbar">
+     <header>Installation Process</header>
+      <a href="#Step_1:_Create_a_live_USB_or_disk" class="nav-link">Step 1: Create a live USB or disk</a>
+      <a href="#Step_2:_Boot_in_to_live_USB" class="nav-link">Step 2: Boot in to live USB</a>
+      <a href="#Step_3:_Start_the_installation" class="nav-link">Step 3: Start the installation</a>
+      <a href="#Step_4:_Prepare_the_partition" class="nav-link">Step 4: Prepare the partition</a>
+      <a href="#Step_5:_Create_root,_swap_and_home" class="nav-link">Step 5: Create root, swap and home</a>
+    </nav>
+
+  </div>
+  <div class="card">
+
+
+  </div>
+  <div class="card">
+
+  </div>
+
+     </main>
+    </div>
+
+
+<div class="rightcolumn">
+  <main id="main-doc">
+
+
+  <div class="card">
+   <section class="main-section" id="Step_1:_Create_a_live_USB_or_disk">
+      <header class="header" >Step 1: Create a live USB or disk</header>
+      <code></code>
+       <img src="images/USB_CD.jpg" alt="CD" class="imgcenter">
+       <p>Download and create a live USB or DVD.</p>
+       <p> In Windows, my personal favorite tool to create a live USB is Universal USB Installer.</p>
+   </section>
+  </div>
+
+  <div class="card">
+   <section class="main-section" id="Step_2:_Boot_in_to_live_USB">
+    <header class="header" >Step 2: Boot in to live USB</header>
+    <code></code>
+     <img src="images/boot_in_live.png" alt="booting live" class="imgcenter">
+      <p>Plug the live USB or disk in to the computer and restart the computer. </p>
+      <p>While booting the computer press F10 or F12 function key (defers from computer to computer) to go to the boot menu. Now, choose the option to boot from USB or Removable Media.</p>
+   </section>
+  </div>
+
+  <div class="card">
+    <section class="main-section" id="Step_3:_Start_the_installation">
+     <header class="header">Step 3: Start the installation</header>
+     <code></code>
+     <img src="images/start_the_installation.png" alt="installation process" class="imgcenter">
+       <p>It will take some time to boot in to the live USB or disk. Once booted, you will be immediately provided with option to either try Ubuntu or install Ubuntu.</p>
+       <p>Even if you choose to try, you can find the option to install on the desktop: First few screens are pretty straight forward. Just choose press continue:</p>
+    </section>
+     </div>
+
+  <div class="card">
+  <section class="main-section" id="Step_4:_Prepare_the_partition">
+    <header class="header">Step 4: Prepare the partition</header>
+    <img src="images/prepare_the_partition.png" alt="prepare the partition" class="imgcenter">
+    <code></code>
+     <p>This is the most important part of the whole dual boot installation. Where to install Ubuntu? Windows is already installed here, so, we’ll prepare a new partition for Ubuntu. In the Installation Type window, choose Something Else:</p>
+     <p>As you can see, I have 3 NTFS and some ext4 partitions. If you don’t have ext4 partition, don’t worry, we don’t need that. As you can see in the picture below, one of the NTFS partition consists of Windows installation. This should be untouched if you want to keep your Windows installation safe.
+     I presume that you have more than one NTFS (or FAT 32) partitions (i.e. Drives in Windows term) on your hard disk, with one of them consisting of Windows installation (usually C drive). What you need to do here is to delete a NTFS or existing ext4 partition and create some free space. This will delete all the data in that partition and this is why I asked you to verify if you have Windows installed in a different partition.
+     Click on the desired partition and press the – to delete the partition.</p>
+   </section>
+  </div>
+
+
+  <div class="card">
+   <section class="main-section" id="Step_5:_Create_root,_swap_and_home">
+    <header class="header">Step 5: Create root, swap and home</header>
+    <img src="images/create_root_swap_home.jpeg" alt="root swap home" class="imgcenter">
+    <code></code>
+      <p>Once you have some free space on your hard drive, its time to install Ubuntu on it. Now, there are several ways to do it.</p>
+      <p>But I prefer to to have a Root, a Swap and a Home.
+         The root should be at least 15 GB for a comfortable use. If you have more disk space, increase the root size. Suppose you have 100 GB of disk space. You can easily devote 30 GB of space to root..</p>
+      <ol>
+       <li>Create a root partition first. Choose the free space available and click on +.</li>
+       <li>Here, choose the size of root directory (keep it 20 GB or more), choose ext4file system, and mount point as / (i.e. root):</li>
+       <li>Next step is to create swap partition. It is advised by many that Swap should be double of your system’s RAM size. You can choose the swap size accordingly.</li>
+       <li>The next step is to create Home. Try to allocate the maximum size to Home because this is where you’ll be downloading and keeping the files.</li>
+       <li>Once you have created Root, Swap and Home partitions, click on Install Now button.</li>
+      <ol>
+  </div>
+
+    </div>
+  </div>
+
+    <div class="footer">
+      <h2>source= "https://itsfoss.com/install-ubuntu-dual-boot-mode-windows/"</h2>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+  </html>
